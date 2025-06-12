@@ -14,7 +14,6 @@
   <enabledle>T</enabledle>
   <enablekeywords>T</enablekeywords>
   <enablemailmerge>F</enablemailmerge>
-  <enablenametranslation>F</enablenametranslation>
   <enablenumbering>F</enablenumbering>
   <enableoptimisticlocking>T</enableoptimisticlocking>
   <enablesystemnotes>T</enablesystemnotes>
@@ -68,7 +67,7 @@
       <maxvalue></maxvalue>
       <minvalue></minvalue>
       <onparentdelete>SET_NULL</onparentdelete>
-      <parentsubtab>[scriptid=custtab_tsc_ap_approval_history]</parentsubtab>
+      <parentsubtab></parentsubtab>
       <rolerestrict>F</rolerestrict>
       <searchcomparefield></searchcomparefield>
       <searchdefault></searchdefault>
@@ -281,10 +280,10 @@
       <storevalue>T</storevalue>
       <subtab></subtab>
     </customrecordcustomfield>
-    <customrecordcustomfield scriptid="custrecord_tsc_approval_notes">
+    <customrecordcustomfield scriptid="custrecord_tsc_amount_action">
       <accesslevel>2</accesslevel>
       <allowquickadd>F</allowquickadd>
-      <applyformatting>F</applyformatting>
+      <applyformatting>T</applyformatting>
       <checkspelling>F</checkspelling>
       <defaultchecked>F</defaultchecked>
       <defaultselection></defaultselection>
@@ -296,13 +295,13 @@
       <dynamicdefault></dynamicdefault>
       <enabletextenhance>F</enabletextenhance>
       <encryptatrest>F</encryptatrest>
-      <fieldtype>TEXTAREA</fieldtype>
+      <fieldtype>CURRENCY</fieldtype>
       <globalsearch>F</globalsearch>
       <help></help>
       <isformula>F</isformula>
       <ismandatory>F</ismandatory>
       <isparent>F</isparent>
-      <label>Approval Notes</label>
+      <label>Amount </label>
       <linktext></linktext>
       <maxlength></maxlength>
       <maxvalue></maxvalue>
@@ -321,7 +320,7 @@
       <storevalue>T</storevalue>
       <subtab></subtab>
     </customrecordcustomfield>
-    <customrecordcustomfield scriptid="custrecord_tsc_is_delegate_action">
+    <customrecordcustomfield scriptid="custrecord_tsc_approval_level">
       <accesslevel>2</accesslevel>
       <allowquickadd>F</allowquickadd>
       <applyformatting>F</applyformatting>
@@ -336,13 +335,13 @@
       <dynamicdefault></dynamicdefault>
       <enabletextenhance>F</enabletextenhance>
       <encryptatrest>F</encryptatrest>
-      <fieldtype>CHECKBOX</fieldtype>
+      <fieldtype>TEXT</fieldtype>
       <globalsearch>F</globalsearch>
       <help></help>
       <isformula>F</isformula>
       <ismandatory>F</ismandatory>
       <isparent>F</isparent>
-      <label>Is Delegate Action</label>
+      <label>Approval Level</label>
       <linktext></linktext>
       <maxlength></maxlength>
       <maxvalue></maxvalue>
@@ -354,7 +353,7 @@
       <searchdefault></searchdefault>
       <searchlevel>2</searchlevel>
       <selectrecordtype></selectrecordtype>
-      <showinlist>T</showinlist>
+      <showinlist>F</showinlist>
       <sourcefilterby></sourcefilterby>
       <sourcefrom></sourcefrom>
       <sourcelist></sourcelist>

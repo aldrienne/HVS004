@@ -17,9 +17,6 @@
       <feature required="false">OPPORTUNITIES</feature>
       <feature required="false">CUSTOMSEGMENTS</feature>
       <feature required="false">ACCOUNTING</feature>
-    </features>
-    <objects>
-      <object>custtab_tsc_ap_approval_history</object>
-    </objects>
+    </features>   
   </dependencies>
 </manifest>
