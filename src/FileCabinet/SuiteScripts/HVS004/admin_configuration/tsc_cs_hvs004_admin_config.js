@@ -51,6 +51,9 @@ define(['N/ui/dialog', 'N/currentRecord', '../core/tsc_cm_constants'],
             if (sublistId === 'custpage_delegates_sublist') {
                 if (fieldId === 'custpage_delegate_primary') {
                     validateUniquePrimaryApprover(currentRecord, scriptContext.line);
+                    validatePrimaryNotEqualDelegate(currentRecord);
+                } else if (fieldId === 'custpage_delegate_approver') {
+                    validatePrimaryNotEqualDelegate(currentRecord);
                 }
             }
         }
@@ -63,11 +66,12 @@ define(['N/ui/dialog', 'N/currentRecord', '../core/tsc_cm_constants'],
          */
         const validateLine = (scriptContext) => {
             const { currentRecord, sublistId } = scriptContext;
+            const currentLine = currentRecord.getCurrentSublistIndex({ sublistId: sublistId });
             
             // Validate Approval Thresholds sublist
             if (sublistId === 'custpage_thresholds_sublist') {
                 // Validate unique approval type
-                if (!validateUniqueApprovalType(currentRecord)) {
+                if (!validateUniqueApprovalType(currentRecord, currentLine)) {
                     return false;
                 }
                 
@@ -80,7 +84,7 @@ define(['N/ui/dialog', 'N/currentRecord', '../core/tsc_cm_constants'],
             // Validate Approver Configuration sublist
             if (sublistId === 'custpage_approver_sublist') {
                 // Validate unique configuration type
-                if (!validateUniqueConfigurationType(currentRecord)) {
+                if (!validateUniqueConfigurationType(currentRecord, currentLine)) {
                     return false;
                 }
             }
@@ -88,7 +92,12 @@ define(['N/ui/dialog', 'N/currentRecord', '../core/tsc_cm_constants'],
             // Validate Delegates sublist
             if (sublistId === 'custpage_delegates_sublist') {
                 // Validate unique primary approver
-                if (!validateUniquePrimaryApprover(currentRecord)) {
+                if (!validateUniquePrimaryApprover(currentRecord, currentLine)) {
+                    return false;
+                }
+                
+                // Validate primary approver not equal to delegate approver
+                if (!validatePrimaryNotEqualDelegate(currentRecord)) {
                     return false;
                 }
                 
@@ -214,6 +223,11 @@ define(['N/ui/dialog', 'N/currentRecord', '../core/tsc_cm_constants'],
                         sublistId: 'custpage_delegates_sublist',
                         line: i
                     });
+                    
+                    // Validate primary approver not equal to delegate approver
+                    if (!validatePrimaryNotEqualDelegate(currentRecord)) {
+                        return false;
+                    }
                     
                     if (!validateDelegatesDates(currentRecord)) {
                         return false;
@@ -381,6 +395,34 @@ define(['N/ui/dialog', 'N/currentRecord', '../core/tsc_cm_constants'],
                     });
                     return false;
                 }
+            }
+            
+            return true;
+        }
+        
+        /**
+         * Validates that primary approver is not equal to delegate approver
+         * @param {Record} currentRecord - The current record
+         * @returns {boolean} Returns true if validation passes
+         */
+        const validatePrimaryNotEqualDelegate = (currentRecord) => {
+            const primaryApprover = currentRecord.getCurrentSublistValue({
+                sublistId: 'custpage_delegates_sublist',
+                fieldId: 'custpage_delegate_primary'
+            });
+            
+            const delegateApprover = currentRecord.getCurrentSublistValue({
+                sublistId: 'custpage_delegates_sublist',
+                fieldId: 'custpage_delegate_approver'
+            });
+            
+            // Only validate if both fields have values
+            if (primaryApprover && delegateApprover && primaryApprover === delegateApprover) {
+                dialog.alert({
+                    title: 'Validation Error',
+                    message: 'Primary Approver and Delegate Approver cannot be the same person. Please select different approvers.'
+                });
+                return false;
             }
             
             return true;
