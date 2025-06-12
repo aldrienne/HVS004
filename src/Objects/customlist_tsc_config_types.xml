@@ -1,0 +1,16 @@
+<customlist scriptid="customlist_tsc_config_types">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>Approval Config Types</name>
+  <customvalues>
+    <customvalue scriptid="val_106601_8172786_sb1_316">
+      <isinactive>F</isinactive>
+      <value>Company Role</value>
+    </customvalue>
+    <customvalue scriptid="val_106602_8172786_sb1_885">
+      <isinactive>F</isinactive>
+      <value>Department</value>
+    </customvalue>
+  </customvalues>
+</customlist>

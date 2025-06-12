@@ -1,0 +1,16 @@
+<customlist scriptid="customlist_tsc_approval_actions">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>Approval Actions</name>
+  <customvalues>
+    <customvalue scriptid="val_106610_8172786_sb1_682">
+      <isinactive>F</isinactive>
+      <value>Approved</value>
+    </customvalue>
+    <customvalue scriptid="val_106611_8172786_sb1_396">
+      <isinactive>F</isinactive>
+      <value>Rejected</value>
+    </customvalue>
+  </customvalues>
+</customlist>
