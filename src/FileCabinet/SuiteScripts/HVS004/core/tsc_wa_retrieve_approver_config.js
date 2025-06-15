@@ -6,7 +6,7 @@ define(['N/search', './tsc_cm_constants.js', 'N/runtime'],
     
     (search,TSCCONST, runtime) => {
         const SCRIPT_PARAMETERS = {
-            APPROVAL_FLOW: 'custscript_hvs004_approval_flow'
+            APPROVAL_FLOW: 'custscript_tsc_wa_approval_flow'
         };
         /**
          * Defines the WorkflowAction script trigger point.
@@ -35,17 +35,10 @@ define(['N/search', './tsc_cm_constants.js', 'N/runtime'],
                 [TSCCONST.CUSTOM_RECORDS.APPROVAL_THRESHOLDS.FIELDS.THRESHOLD_TYPE, 'anyof', approvalFlow]
             ];
 
-            const columns = [
-                search.createColumn({ name: TSCCONST.CUSTOM_RECORDS.APPROVAL_THRESHOLDS.FIELDS.COMPANY_AUTO_APPROVAL_LIMIT }),
-                search.createColumn({ name: TSCCONST.CUSTOM_RECORDS.APPROVAL_THRESHOLDS.FIELDS.TIER_1_APPROVAL_LIMIT }),
-                search.createColumn({ name: TSCCONST.CUSTOM_RECORDS.APPROVAL_THRESHOLDS.FIELDS.TIER_2_APPROVAL_LIMIT }),
-                search.createColumn({ name: TSCCONST.CUSTOM_RECORDS.APPROVAL_THRESHOLDS.FIELDS.TIER_3_APPROVAL_LIMIT })
-            ];
-
             const approverConfigSearch = search.create({
                 type: TSCCONST.CUSTOM_RECORDS.APPROVAL_THRESHOLDS.ID,
                 filters: filters,
-                columns: columns
+                columns: []
             });
 
             const searchResults = approverConfigSearch.run().getRange({ start: 0, end: 1 });
