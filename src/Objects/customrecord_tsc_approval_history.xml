@@ -67,7 +67,7 @@
       <maxvalue></maxvalue>
       <minvalue></minvalue>
       <onparentdelete>SET_NULL</onparentdelete>
-      <parentsubtab></parentsubtab>
+      <parentsubtab>[scriptid=custtab_tsc_approval_history]</parentsubtab>
       <rolerestrict>F</rolerestrict>
       <searchcomparefield></searchcomparefield>
       <searchdefault></searchdefault>
