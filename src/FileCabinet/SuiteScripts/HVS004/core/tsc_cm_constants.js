@@ -32,6 +32,7 @@ define([], function() {
     // Custom Body Fields (Transaction Fields)
     const CUSTOM_BODY_FIELDS = {
         APPROVAL_FLOW: 'custbody_tsc_approval_flow',
+        APPROVAL_LEVEL: 'custbody_tsc_approval_level',
         ASSIGNED_DELEGATE_APPROVER: 'custbody_tsc_assigned_delegate_approv',
         CREATED_BY: 'custbody_tsc_created_by',
         IS_DELEGATE_ACTIVE: 'custbody_tsc_is_delegate_active'
