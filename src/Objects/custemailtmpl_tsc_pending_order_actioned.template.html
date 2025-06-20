@@ -1,0 +1,10 @@
+<p>Hi ${transaction.custbody_tsc_created_by},</p>
+<p>Your purchase order ${transaction.tranid} has been actioned and needs your review.</p>
+<p>Purchase Order Details</p>
+<ul>
+<li>PO Number: ${transaction.tranid}</li>
+<li>Vendor: ${transaction.entity}</li>
+<li>Amount: ${transaction.total}&nbsp;</li>
+<li>Flow Type: ${transaction.custbody_tsc_approval_flow}&nbsp;</li>
+</ul>
+<p>If you have questions about this decision, please contact the approving manager or purchasing department. Best regards, Harvest Solar Purchasing System</p>

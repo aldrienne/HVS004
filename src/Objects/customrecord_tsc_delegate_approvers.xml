@@ -14,7 +14,6 @@
   <enabledle>T</enabledle>
   <enablekeywords>T</enablekeywords>
   <enablemailmerge>F</enablemailmerge>
-  <enablenametranslation>F</enablenametranslation>
   <enablenumbering>F</enablenumbering>
   <enableoptimisticlocking>T</enableoptimisticlocking>
   <enablesystemnotes>T</enablesystemnotes>
@@ -202,4 +201,27 @@
       <subtab></subtab>
     </customrecordcustomfield>
   </customrecordcustomfields>
+  <instances>
+    <instance scriptid="val_242144_8187582_sb1_620">
+      <custrecord_delegate_start_date></custrecord_delegate_start_date>
+      <custrecord_tsc_delegate_approver>[ACCOUNT_SPECIFIC_VALUE]</custrecord_tsc_delegate_approver>
+      <custrecord_tsc_delegate_end_date></custrecord_tsc_delegate_end_date>
+      <custrecord_tsc_delegate_primary_approver>[ACCOUNT_SPECIFIC_VALUE]</custrecord_tsc_delegate_primary_approver>
+      <isinactive>T</isinactive>
+    </instance>
+    <instance scriptid="val_242175_8187582_sb1_476">
+      <custrecord_delegate_start_date>2025-06-15</custrecord_delegate_start_date>
+      <custrecord_tsc_delegate_approver>[ACCOUNT_SPECIFIC_VALUE]</custrecord_tsc_delegate_approver>
+      <custrecord_tsc_delegate_end_date></custrecord_tsc_delegate_end_date>
+      <custrecord_tsc_delegate_primary_approver>[ACCOUNT_SPECIFIC_VALUE]</custrecord_tsc_delegate_primary_approver>
+      <isinactive>F</isinactive>
+    </instance>
+    <instance scriptid="val_242211_8187582_sb1_816">
+      <custrecord_delegate_start_date>2025-06-18</custrecord_delegate_start_date>
+      <custrecord_tsc_delegate_approver>[ACCOUNT_SPECIFIC_VALUE]</custrecord_tsc_delegate_approver>
+      <custrecord_tsc_delegate_end_date></custrecord_tsc_delegate_end_date>
+      <custrecord_tsc_delegate_primary_approver>[ACCOUNT_SPECIFIC_VALUE]</custrecord_tsc_delegate_primary_approver>
+      <isinactive>F</isinactive>
+    </instance>
+  </instances>
 </customrecordtype>

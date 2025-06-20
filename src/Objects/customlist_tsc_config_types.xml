@@ -6,11 +6,15 @@
   <customvalues>
     <customvalue scriptid="val_106601_8172786_sb1_316">
       <isinactive>F</isinactive>
-      <value>Company Role</value>
+      <value>Materials</value>
     </customvalue>
     <customvalue scriptid="val_106602_8172786_sb1_885">
       <isinactive>F</isinactive>
-      <value>Department</value>
+      <value>Project Services</value>
+    </customvalue>
+    <customvalue scriptid="val_242129_8187582_sb1_213">
+      <isinactive>F</isinactive>
+      <value>Construction</value>
     </customvalue>
   </customvalues>
 </customlist>

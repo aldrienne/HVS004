@@ -14,7 +14,6 @@
   <enabledle>T</enabledle>
   <enablekeywords>T</enablekeywords>
   <enablemailmerge>F</enablemailmerge>
-  <enablenametranslation>F</enablenametranslation>
   <enablenumbering>F</enablenumbering>
   <enableoptimisticlocking>T</enableoptimisticlocking>
   <enablesystemnotes>T</enablesystemnotes>
@@ -60,7 +59,7 @@
       <globalsearch>F</globalsearch>
       <help></help>
       <isformula>F</isformula>
-      <ismandatory>F</ismandatory>
+      <ismandatory>T</ismandatory>
       <isparent>F</isparent>
       <label>Approval Type</label>
       <linktext></linktext>
@@ -100,9 +99,9 @@
       <globalsearch>F</globalsearch>
       <help></help>
       <isformula>F</isformula>
-      <ismandatory>F</ismandatory>
+      <ismandatory>T</ismandatory>
       <isparent>F</isparent>
-      <label>Company Auto Approval Limit</label>
+      <label>Auto Approval Limit</label>
       <linktext></linktext>
       <maxlength></maxlength>
       <maxvalue></maxvalue>
@@ -300,7 +299,7 @@
       <globalsearch>F</globalsearch>
       <help></help>
       <isformula>F</isformula>
-      <ismandatory>F</ismandatory>
+      <ismandatory>T</ismandatory>
       <isparent>F</isparent>
       <label>Tier 1 Approval Limit</label>
       <linktext></linktext>
@@ -340,7 +339,7 @@
       <globalsearch>F</globalsearch>
       <help></help>
       <isformula>F</isformula>
-      <ismandatory>F</ismandatory>
+      <ismandatory>T</ismandatory>
       <isparent>F</isparent>
       <label>Tier 2 Approval Limit</label>
       <linktext></linktext>
@@ -402,4 +401,30 @@
       <subtab></subtab>
     </customrecordcustomfield>
   </customrecordcustomfields>
+  <instances>
+    <instance scriptid="val_242145_8187582_sb1_103">
+      <custrecord_tsc_comp_auto_approval_limit>1000.00</custrecord_tsc_comp_auto_approval_limit>
+      <custrecord_tsc_threshold_type>[scriptid=customlist_tsc_config_types.val_106601_8172786_sb1_316]</custrecord_tsc_threshold_type>
+      <custrecord_tsc_tier_1_approval_limit>5000.00</custrecord_tsc_tier_1_approval_limit>
+      <custrecord_tsc_tier_2_approver_limit>50000.00</custrecord_tsc_tier_2_approver_limit>
+      <custrecord_tsc_tier_3_approver_limit></custrecord_tsc_tier_3_approver_limit>
+      <isinactive>F</isinactive>
+    </instance>
+    <instance scriptid="val_242146_8187582_sb1_917">
+      <custrecord_tsc_comp_auto_approval_limit>1000.00</custrecord_tsc_comp_auto_approval_limit>
+      <custrecord_tsc_threshold_type>[scriptid=customlist_tsc_config_types.val_106602_8172786_sb1_885]</custrecord_tsc_threshold_type>
+      <custrecord_tsc_tier_1_approval_limit>5000.00</custrecord_tsc_tier_1_approval_limit>
+      <custrecord_tsc_tier_2_approver_limit>50000.00</custrecord_tsc_tier_2_approver_limit>
+      <custrecord_tsc_tier_3_approver_limit></custrecord_tsc_tier_3_approver_limit>
+      <isinactive>F</isinactive>
+    </instance>
+    <instance scriptid="val_242147_8187582_sb1_291">
+      <custrecord_tsc_comp_auto_approval_limit>1000.00</custrecord_tsc_comp_auto_approval_limit>
+      <custrecord_tsc_threshold_type>[scriptid=customlist_tsc_config_types.val_242129_8187582_sb1_213]</custrecord_tsc_threshold_type>
+      <custrecord_tsc_tier_1_approval_limit>5000.00</custrecord_tsc_tier_1_approval_limit>
+      <custrecord_tsc_tier_2_approver_limit>50000.00</custrecord_tsc_tier_2_approver_limit>
+      <custrecord_tsc_tier_3_approver_limit></custrecord_tsc_tier_3_approver_limit>
+      <isinactive>F</isinactive>
+    </instance>
+  </instances>
 </customrecordtype>

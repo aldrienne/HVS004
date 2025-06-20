@@ -14,7 +14,6 @@
   <enabledle>T</enabledle>
   <enablekeywords>T</enablekeywords>
   <enablemailmerge>T</enablemailmerge>
-  <enablenametranslation>F</enablenametranslation>
   <enablenumbering>F</enablenumbering>
   <enableoptimisticlocking>T</enableoptimisticlocking>
   <enablesystemnotes>T</enablesystemnotes>
@@ -36,7 +35,7 @@
   <showid>F</showid>
   <showlastmodified>F</showlastmodified>
   <showlastmodifiedonlist>F</showlastmodifiedonlist>
-  <shownotes>T</shownotes>
+  <shownotes>F</shownotes>
   <showowner>F</showowner>
   <showownerallowchange>F</showownerallowchange>
   <showowneronlist>F</showowneronlist>
@@ -113,7 +112,7 @@
       <searchcomparefield></searchcomparefield>
       <searchdefault></searchdefault>
       <searchlevel>2</searchlevel>
-      <selectrecordtype>[scriptid=customlist_tsc_role_types]</selectrecordtype>
+      <selectrecordtype>[scriptid=customlist_tsc_role_levels]</selectrecordtype>
       <showinlist>F</showinlist>
       <sourcefilterby></sourcefilterby>
       <sourcefrom></sourcefrom>
@@ -362,4 +361,27 @@
       <subtab></subtab>
     </customrecordcustomfield>
   </customrecordcustomfields>
+  <instances>
+    <instance scriptid="val_242138_8187582_sb1_212">
+      <custrecord_tsc_primary_approver>[ACCOUNT_SPECIFIC_VALUE]</custrecord_tsc_primary_approver>
+      <custrecord_tsc_secondary_approver>[ACCOUNT_SPECIFIC_VALUE]</custrecord_tsc_secondary_approver>
+      <custrecord_tsc_tertiary_approver>[ACCOUNT_SPECIFIC_VALUE]</custrecord_tsc_tertiary_approver>
+      <custrecordtsc_config_type>[scriptid=customlist_tsc_config_types.val_106601_8172786_sb1_316]</custrecordtsc_config_type>
+      <isinactive>F</isinactive>
+    </instance>
+    <instance scriptid="val_242143_8187582_sb1_430">
+      <custrecord_tsc_primary_approver>[ACCOUNT_SPECIFIC_VALUE]</custrecord_tsc_primary_approver>
+      <custrecord_tsc_secondary_approver>[ACCOUNT_SPECIFIC_VALUE]</custrecord_tsc_secondary_approver>
+      <custrecord_tsc_tertiary_approver>[ACCOUNT_SPECIFIC_VALUE]</custrecord_tsc_tertiary_approver>
+      <custrecordtsc_config_type>[scriptid=customlist_tsc_config_types.val_106602_8172786_sb1_885]</custrecordtsc_config_type>
+      <isinactive>F</isinactive>
+    </instance>
+    <instance scriptid="val_242148_8187582_sb1_686">
+      <custrecord_tsc_primary_approver>[ACCOUNT_SPECIFIC_VALUE]</custrecord_tsc_primary_approver>
+      <custrecord_tsc_secondary_approver>[ACCOUNT_SPECIFIC_VALUE]</custrecord_tsc_secondary_approver>
+      <custrecord_tsc_tertiary_approver>[ACCOUNT_SPECIFIC_VALUE]</custrecord_tsc_tertiary_approver>
+      <custrecordtsc_config_type>[scriptid=customlist_tsc_config_types.val_242129_8187582_sb1_213]</custrecordtsc_config_type>
+      <isinactive>F</isinactive>
+    </instance>
+  </instances>
 </customrecordtype>

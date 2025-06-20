@@ -2,6 +2,7 @@
   <accesslevel>2</accesslevel>
   <applyformatting>F</applyformatting>
   <bodycustomerpayment>F</bodycustomerpayment>
+  <bodycustomtransactions></bodycustomtransactions>
   <bodydeposit>F</bodydeposit>
   <bodydepositapplication>F</bodydepositapplication>
   <bodyexpensereport>F</bodyexpensereport>
@@ -13,6 +14,7 @@
   <bodyjournal>F</bodyjournal>
   <bodyopportunity>F</bodyopportunity>
   <bodyothertransaction>F</bodyothertransaction>
+  <bodypaycheck>F</bodypaycheck>
   <bodypickingticket>F</bodypickingticket>
   <bodyprintflag>F</bodyprintflag>
   <bodyprintpackingslip>F</bodyprintpackingslip>
