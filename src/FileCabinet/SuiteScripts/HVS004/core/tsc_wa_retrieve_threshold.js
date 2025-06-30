@@ -34,7 +34,9 @@ define(['N/search', './tsc_cm_constants.js', 'N/runtime'],
 
         const retrieveApprovalThreshold = (approvalFlow) => {
             const filters = [
-                [TSCCONST.CUSTOM_RECORDS.APPROVAL_THRESHOLDS.FIELDS.THRESHOLD_TYPE, 'anyof', approvalFlow]
+                [TSCCONST.CUSTOM_RECORDS.APPROVAL_THRESHOLDS.FIELDS.THRESHOLD_TYPE, 'anyof', approvalFlow],
+                'AND',
+                ['isinactive', 'is', 'F'],
             ];
 
             const columns = [

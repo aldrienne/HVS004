@@ -22,7 +22,7 @@ define(['N/ui/serverWidget', 'N/search', 'N/record', 'N/redirect', '../core/tsc_
                 
                 // Create form
                 const form = serverWidget.createForm({
-                    title: 'TSC Admin Configuration'
+                    title: 'Administrator Configuration'
                 });
                 
                 // Add client script for validation
@@ -201,12 +201,7 @@ define(['N/ui/serverWidget', 'N/search', 'N/record', 'N/redirect', '../core/tsc_
                 // Add Submit button
                 form.addSubmitButton({
                     label: 'Save'
-                });
-                
-                // Add Reset button
-                form.addResetButton({
-                    label: 'Reset'
-                });
+                });            
                 
                 // Populate sublists with existing data
                 populateApproverConfigSublist(form);

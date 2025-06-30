@@ -342,7 +342,7 @@
           <waitforworkflow></waitforworkflow>
           <waitforworkflowstate></waitforworkflowstate>
           <initcondition>
-            <formula><![CDATA["Total" >= "Workflow:Approval Threshold:Auto Approval Limit" AND "User" NOT IN ("Workflow:Approver Config:Primary Approver")]]></formula>
+            <formula><![CDATA["Total" >= "Workflow:Approval Threshold:Auto Approval Limit" AND "User" NOT IN ("Workflow:Approver Config:Primary Approver") AND isEmpty("Workflow:Approval Threshold") = 'F' AND isEmpty("Workflow:Approver Config") = 'F']]></formula>
             <type>VISUAL_BUILDER</type>
             <parameters>
               <parameter>
@@ -361,6 +361,14 @@
                 <name>Workflow:Approver Config:Primary Approver</name>
                 <value>[scriptid=customworkflow_tsc_wf_approval_process.custworkflow_tsc_hvs008_approver_config]:[scriptid=customrecord_tsc_approver_config.custrecord_tsc_primary_approver]</value>
               </parameter>
+              <parameter>
+                <name>Workflow:Approval Threshold</name>
+                <value>[scriptid=customworkflow_tsc_wf_approval_process.custworkflow_tsc_hvs004_app_threshold]</value>
+              </parameter>
+              <parameter>
+                <name>Workflow:Approver Config</name>
+                <value>[scriptid=customworkflow_tsc_wf_approval_process.custworkflow_tsc_hvs008_approver_config]</value>
+              </parameter>
             </parameters>
           </initcondition>
         </workflowtransition>
@@ -376,7 +384,7 @@
           <waitforworkflow></waitforworkflow>
           <waitforworkflowstate></waitforworkflowstate>
           <initcondition>
-            <formula><![CDATA[( "Total" > "Workflow:Approval Threshold:Tier 1 Approval Limit" ) AND ( "User" IN ("Workflow:Approver Config:Primary Approver") )]]></formula>
+            <formula><![CDATA[( "Total" > "Workflow:Approval Threshold:Tier 1 Approval Limit" ) AND ( "User" IN ("Workflow:Approver Config:Primary Approver") ) AND isEmpty("Workflow:Approval Threshold") = 'F' AND isEmpty("Workflow:Approver Config") = 'F']]></formula>
             <type>VISUAL_BUILDER</type>
             <parameters>
               <parameter>
@@ -394,6 +402,40 @@
               <parameter>
                 <name>Workflow:Approver Config:Primary Approver</name>
                 <value>[scriptid=customworkflow_tsc_wf_approval_process.custworkflow_tsc_hvs008_approver_config]:[scriptid=customrecord_tsc_approver_config.custrecord_tsc_primary_approver]</value>
+              </parameter>
+              <parameter>
+                <name>Workflow:Approval Threshold</name>
+                <value>[scriptid=customworkflow_tsc_wf_approval_process.custworkflow_tsc_hvs004_app_threshold]</value>
+              </parameter>
+              <parameter>
+                <name>Workflow:Approver Config</name>
+                <value>[scriptid=customworkflow_tsc_wf_approval_process.custworkflow_tsc_hvs008_approver_config]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </workflowtransition>
+        <workflowtransition scriptid="workflowtransition648">
+          <buttonaction></buttonaction>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <eventtypes></eventtypes>
+          <scheduledelay></scheduledelay>
+          <scheduletimeunit></scheduletimeunit>
+          <tostate>[scriptid=customworkflow_tsc_wf_approval_process.workflowstate711]</tostate>
+          <triggertype>AFTERSUBMIT</triggertype>
+          <waitforworkflow></waitforworkflow>
+          <waitforworkflowstate></waitforworkflowstate>
+          <initcondition>
+            <formula><![CDATA[isEmpty("Workflow:Approval Threshold") = 'T' OR isEmpty("Workflow:Approver Config") = 'T']]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Workflow:Approval Threshold</name>
+                <value>[scriptid=customworkflow_tsc_wf_approval_process.custworkflow_tsc_hvs004_app_threshold]</value>
+              </parameter>
+              <parameter>
+                <name>Workflow:Approver Config</name>
+                <value>[scriptid=customworkflow_tsc_wf_approval_process.custworkflow_tsc_hvs008_approver_config]</value>
               </parameter>
             </parameters>
           </initcondition>

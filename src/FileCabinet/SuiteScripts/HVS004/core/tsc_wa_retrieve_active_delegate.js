@@ -37,7 +37,7 @@ define(['N/search', './tsc_cm_constants.js', 'N/runtime'],
             const filters = [
                 [TSCCONST.CUSTOM_RECORDS.DELEGATE_APPROVERS.FIELDS.PRIMARY_APPROVER, 'anyof', primaryApprover],
                 'AND',
-                ['isinactive', 'is', false],
+                ['isinactive', 'is', 'F'],
                 'AND',
                 [TSCCONST.CUSTOM_RECORDS.DELEGATE_APPROVERS.FIELDS.START_DATE, 'onorbefore', 'today'],
                 'AND',
