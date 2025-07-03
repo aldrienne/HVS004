@@ -1,0 +1,31 @@
+<script scripttype="suitelet" scriptid="customscript_tsc_sl_hvs004_self_delegate">
+  <description>HVS004 Self-Service Delegation Management Suitelet - Allows approvers to manage their own delegation assignments</description>
+  <isinactive>F</isinactive>
+  <name>TSC|SL|HVS004 Self Delegate</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifygroup></notifygroup>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[scriptid=HVS004/tsc_sl_hvs004_self_delegate.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_tsc_sl_hvs004_self_delegate">
+      <allemployees>T</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>F</allroles>
+      <auddepartment></auddepartment>
+      <audgroup></audgroup>
+      <audpartner></audpartner>
+      <audslctrole></audslctrole>
+      <audsubs></audsubs>
+      <auduser></auduser>
+      <eventtype></eventtype>
+      <isdeployed>T</isdeployed>
+      <isinactive>F</isinactive>
+      <loglevel>DEBUG</loglevel>
+      <runasrole></runasrole>
+      <status>RELEASED</status>
+      <title>TSC Self Delegate - Production</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</script>
